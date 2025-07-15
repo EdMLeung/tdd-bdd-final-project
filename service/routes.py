@@ -125,6 +125,9 @@ def list_products():
         app.logger.info("Find all")
         products = Product.all()
 
+        app.logger.info("Find all")
+        products = Product.all()
+
     results = [product.serialize() for product in products]
     app.logger.info("[%s] Products returned", len(results))
     return results, status.HTTP_200_OK
@@ -189,6 +192,5 @@ def delete_products(product_id):
 
     product = Product.find(product_id)
     if product:
-        product.delete()
-
-    return "", status.HTTP_204_NO_CONTENT
+urned", len(results))
+    return results, status.HTTP_200_OKOK
