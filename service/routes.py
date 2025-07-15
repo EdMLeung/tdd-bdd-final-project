@@ -191,6 +191,9 @@ def delete_products(product_id):
     app.logger.info("Request to Delete a product with id [%s]", product_id)
 
     product = Product.find(product_id)
+
     if product:
-urned", len(results))
-    return results, status.HTTP_200_OKOK
+        product.delete()
+        app.logger.info("Product with id [%s] deleted!", product_id)
+
+    return "", status.HTTP_204_NO_CONTENT
